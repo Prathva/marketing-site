@@ -32,7 +32,6 @@ const App = ({ Component, pageProps }) => {
     }, 5000);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const redpenWidget = process.env.WIDGET_ID1;
 
   return (
     <>
@@ -54,9 +53,9 @@ const App = ({ Component, pageProps }) => {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
       </Head>
-      <script id="redpen-widget-data" type="text/javascript" dangerouslySetInnerHTML={{ __html: `window.redpenWidgetConfig ={widgetId:'${redpenWidget}',}` }} />
-      {/* <script id="redpen-widget-script" defer async src="https://app.redpen.ai/redpenWebWidget.js"></script> */}
-      <script id="redpen-widget-script" defer async src="https://dev.redpen.work/redpenWebWidget.js"></script>
+      <script id="redpen-widget-data" type="text/javascript" dangerouslySetInnerHTML={{ __html: `window.redpenWidgetConfig = {widgetId:'d8fec39c-63d6-4c18-8f47-129ccce7eeb8',}` }} />
+      <script id="redpen-widget-script" async src="https://app.redpen.ai/redpenWebWidget.js"></script>
+
       <Component {...pageProps} />
     </>
   );
